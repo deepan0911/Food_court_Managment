@@ -365,7 +365,7 @@ class PrintableBill implements Printable {
 
         // Set font for the rest of the bill
         g2d.setFont(new Font("Arial", Font.PLAIN, 14));
-        drawCenteredString(g2d, "           *** Thank you for ordering ***           ", x, y, 400);
+
         y += 20;
         drawCenteredString(g2d, "Customer Name: " + bill.customerName, x, y, 400);
         y += 20;
@@ -388,6 +388,7 @@ class PrintableBill implements Printable {
         drawCenteredString(g2d, "Total: " + bill.total, x, y, 400);
         y += 20;
         drawCenteredString(g2d, "====================================================", x, y, 400);
+        drawCenteredString(g2d, "           *** Thank you for ordering ***           ", x, y, 400);
     }
 
     private void drawCenteredString(Graphics2D g2d, String text, int x, int y, int width) {
@@ -514,3 +515,5 @@ public class Main {
         }
     }
 }
+
+
